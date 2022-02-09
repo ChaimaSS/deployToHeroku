@@ -9,6 +9,9 @@ const server = app.listen(PORT);
 //app.set('views', path.join('views'))
 //app.set('view engine', 'ejs')
 //app.get('/', (req, res) => res.render('pages/index'))
+app.get("/", function (req, res) {
+    res.send("<h1>Hello World!</h1>")
+  })
 
 app.use(express.static('public')); 
 
