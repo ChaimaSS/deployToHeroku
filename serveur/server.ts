@@ -6,9 +6,9 @@ const app = express();
 var PORT = process.env.PORT || 3000;
 const server = app.listen(PORT); 
 
-app.set('views', path.join('views'))
+//app.set('views', path.join('views'))
 //app.set('view engine', 'ejs')
-app.get('/', (req, res) => res.render('pages/index'))
+//app.get('/', (req, res) => res.render('pages/index'))
 
 app.use(express.static('public')); 
 
