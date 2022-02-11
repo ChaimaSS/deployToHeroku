@@ -6,9 +6,6 @@ const app = express();
 var PORT = process.env.PORT || 3000;
 const server = app.listen(PORT); 
 
-//app.set('views', path.join('views'))
-//app.set('view engine', 'ejs')
-//app.get('/', (req, res) => res.render('pages/index'))
 app.get("/", function (req, res) {
     res.send("<h1>Hello World!</h1>")
   })
@@ -28,8 +25,5 @@ io.on('connection', (socket) => {
     socket.on('message', (msg) => {
         console.log(msg)
         io.emit('message', msg);
-        //app.get("/", function (req, res) {
-          //  res.send(msg)
-          //})
     })
 })
